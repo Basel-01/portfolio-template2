@@ -1,0 +1,101 @@
+// Tablet
+@media (min-width: 576px) and (max-width: 768px) {
+  .stats .state:nth-child(3) {
+    background-color: $medium-color;
+  }
+  .stats .state:nth-child(4) {
+    background-color: $light-color;
+  }
+}
+
+// Tablet & Smaller
+@media (max-width: 768px) {
+  header {
+      position: relative;
+      background: url("image/showcase.jpg") no-repeat 20% 30%/cover;
+      border-bottom: 3px solid $primary-color;
+    .bars {
+      width: 30px;
+      height: 23px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .bars span {
+      display: block;
+      background-color: $primary-color;
+      width: 100%;
+      height: 3px;
+      border-radius: 5px;
+    }
+    .bars span:nth-child(2) {
+      width: 75%;
+      transition: 0.3s;
+    }
+    .bars:hover span:nth-child(2) {
+      width: 100%;
+    }
+    ul {
+      width: 100%;
+      justify-content: center;
+      height: 0;
+      overflow: hidden;
+      transition: 0.5s;
+
+    }
+    ul.show {
+      height: 64px;
+    }
+  }
+  .showcase {
+    display: none;
+  }
+}
+
+// Smartphones
+@media (max-width: 576px) {
+  header {
+    ul {
+      li {
+        margin: 15px 10px;
+      }
+    }
+  }
+  .container > .row {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+  }
+  .stats .state {
+    padding: 30px 0;
+  }
+  .creative i {
+    margin: 20px auto 20px;
+  }
+  .main-footer .container {
+    flex-direction: column;
+    p {
+      margin-bottom: 15px;
+    }
+    a {
+      margin: 0 5px;
+    }
+  }
+  .contact-info {
+    div {
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 1px dotted #555;
+      &:last-child {
+        border: none;
+        padding-bottom: 0;
+        margin: 0;
+      }
+    }
+  }
+  .start p {
+    font-size: 30px;
+  }
+}
